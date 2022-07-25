@@ -2,40 +2,60 @@ import java.util.Scanner;
 
 public class sinifGecme_ifelse {
     public static void main(String[] args) {
-        int mathematics, physics, turkish, chemistry, music;
 
-        Scanner inp=new Scanner(System.in);
+        /*
+        Dersler : Matematik, Fizik, Türkçe, Kimya, Müzik
 
-        System.out.println("Your math grade:");
-        mathematics= inp.nextInt();
+        Geçme Notu : 55
 
-        System.out.println("Your physics grade:");
-        physics= inp.nextInt();
+        Ödev
+        Eğer girilen ders notları 0 veya 100 arasında değil ise ortalamaya katılmasın.
+         */
 
-        System.out.println("Your turkish grade:");
-        turkish= inp.nextInt();
+        double math,physics,chemical,turkish,music,avarage=0;
 
-        System.out.println("Your chemistry grade:");
-        chemistry= inp.nextInt();
+        Scanner inp= new Scanner(System.in);
+        System.out.println("Enter the math grade:");
+        math=inp.nextDouble();
+        if (!(math<0||math>100)){
+            avarage=avarage+math;
+        }else {
+            avarage=0;
+        }
 
-        System.out.println("Your music grade:");
-        music= inp.nextInt();
+        System.out.println("Enter the physics grade:");
+        physics=inp.nextDouble();
+        if (!(physics<0||physics>100)){
+            avarage=avarage+physics;
+        }
 
-        double avarage=(mathematics+physics+turkish+chemistry+music)/5;
+        System.out.println("Enter the chemical grade:");
+        chemical=inp.nextDouble();
+        if (!(chemical<0||chemical>100)){
+            avarage=avarage+chemical;
+        }
 
+        System.out.println("Enter the turkish grade:");
+        turkish=inp.nextDouble();
+        if (!(turkish<0||turkish>100)){
+            avarage=avarage+turkish;
+        }
+
+        System.out.println("Enter the music grade:");
+        music=inp.nextDouble();
+        if (!(music<0||music>100)){
+            avarage=avarage+music;
+        }
+
+        avarage=avarage/5;
         System.out.println("Don't forget! You having a avarage of min 55 to pass the class..");
         System.out.println("Your avarage:"+avarage);
 
-        if (avarage<=55){
+        if (avarage>=55){
             System.out.println("Congratulations,you passed the class!");
         }else {
             System.out.println("Sorry, you didn't pass the class!");
         }
-
-
-
-
-
 
     }
 }
