@@ -1,8 +1,6 @@
-import java.util.Scanner;
-
 public class asalSayi {
     public static void main(String[] args) {
-        int sayac=0;
+        System.out.println("--------------------------------");
         for(int number=2;number<100;number++){
             int control=0;
             for (int i=2;i<number;i++){
@@ -13,8 +11,9 @@ public class asalSayi {
             }
             if (control==0){
                 System.out.print(number+" ");
-                sayac++;
             }
         }
+
+        System.out.print("\n--------------------------------");
     }
 }
