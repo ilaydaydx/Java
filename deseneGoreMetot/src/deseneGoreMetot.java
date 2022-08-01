@@ -23,7 +23,7 @@ public class deseneGoreMetot {
         Scanner input = new Scanner(System.in);
 
         while (true){
-            System.out.println("Sayiyi giriniz : ");
+            System.out.println("Enter the number : ");
             int number = input.nextInt();
 
             positive(negative(number),number);
@@ -32,7 +32,7 @@ public class deseneGoreMetot {
                 break;
             }
 
-            System.out.println("\nCikmak icin 0'i giriniz.");
+            System.out.println("\nEnter 0 to log out.");
         }
     }
 }
