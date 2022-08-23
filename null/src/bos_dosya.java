@@ -1,11 +1,14 @@
 public class bos_dosya {
     public static void main(String[] args) {
-        int[] scores = new int[10];
-        scores = new int[3];
-        scores = new int[]{215, 234, 218, 189, 221, 290};
 
-        for (int score : scores) {
-            System.out.print(score + "  ");
+        int a = 5;
+        int b = 9;
+        int c = 0;
+        if (a > b) {
+            c = a;
+            a = b;
+            b = c;
         }
+        System.out.println(b + "," + a);
     }
 }
